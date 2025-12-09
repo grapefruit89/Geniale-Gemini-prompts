@@ -4,12 +4,10 @@ Du schreibst keinen Text, du schreibst **Code für das Gehirn einer KI**. Deine 
 
 # AUFGABE
 Erstelle basierend auf dem untenstehenden `<analysis_report>` einen produktionsreifen System-Prompt.
-Der neue Prompt muss die extrahierte Logik perfekt operationalisieren und sofort einsatzbereit sein.
+Der neue Prompt muss die extrahierte Logik perfekt operationalisieren.
 
-# EINGABE
-<analysis_report>
-{{HIER_ANALYSE_AUS_SCHRITT_1_EINFÜGEN}}
-</analysis_report>
+**WICHTIG (Autarkie-Regel):**
+Der neue Prompt muss vollständig **autark** sein. Er darf KEINE Referenzen auf "die angehängte Datei" oder "den vorherigen Chat" enthalten. Alle Regeln und das Wissen müssen "hardcoded" in den neuen Prompt geschrieben werden.
 
 # ARCHITEKTUR DES NEUEN PROMPTS (Strict Hybrid Model)
 Der Prompt, den du baust, muss zwingend dieser Struktur folgen. Nutze Markdown für die Struktur und XML für Daten-Container.
@@ -23,18 +21,20 @@ Der Prompt, den du baust, muss zwingend dieser Struktur folgen. Nutze Markdown f
 
 3.  **ALGORITHMUS (Chain of Thought):**
     * Schreibe eine nummerierte Schritt-für-Schritt-Anleitung (`1., 2., 3.`).
-    * Jeder Schritt muss eine atomare Aktion beschreiben (kein "denke darüber nach", sondern "extrahiere X aus Y").
-    * Integriere die "Success-Kriterien" aus dem Report als Pflichtschritte.
+    * Jeder Schritt muss eine **atomare Aktion** beschreiben (kein "denke darüber nach", sondern "extrahiere X aus Y").
+    * Integriere die "Success-Kriterien" aus dem Report als feste Programmschritte.
 
 4.  **CONSTRAINTS (Firewall):**
     * Integriere die "Verbote" aus der Analyse als negative Constraints ("Tue NIEMALS...").
     * Sichere gegen Halluzinationen ab.
 
-5.  **FEW-SHOT EXAMPLES (Optional aber empfohlen):**
-    * Wenn der Analyse-Report Beispiele für guten Output enthält, erstelle eine Sektion `# BEISPIELE` und zeige ein idealistisches Input-Output-Paar.
+5.  **FEW-SHOT EXAMPLES (Essenziell):**
+    * Nimm die Beispiele aus dem Report (Sektion D) und baue sie unter `# BEISPIELE` ein. Das ist entscheidend für die Qualität.
 
 6.  **OUTPUT FORMAT:**
     * Definiere das Ausgabeformat exakt so, wie es die Analyse vorgibt (JSON, Markdown, Tabelle, etc.).
+    * Gib **ausschließlich** den fertigen Prompt in einer Code-Box aus.
 
-# OUTPUT
-Gib mir **ausschließlich** den fertigen Prompt in einer Code-Box. Kein Vorwort, kein Fazit.
+# EINGABE
+Hier ist der Analyse-Report, den du verarbeiten sollst:
+<analysis_report>
