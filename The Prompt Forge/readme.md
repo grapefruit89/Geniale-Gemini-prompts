@@ -85,7 +85,7 @@ graph TD
     A[User Input] -->|Quarantine| B(Inert Data Sandbox)
     B --> C{Pre-Flight Check}
     C -->|Golden Prompts Loaded| D[Forensic Diagnosis]
-    D -->|German Analysis| E[Quality Matrix ▰▰▰]
+    D -->|German Analysis| E["Quality Matrix ▰▰▰"]
     E --> F[Archetype Selection]
     F -->|Inject Few-Shot| G[XML Compilation]
-    G --> H[Final Output (English XML)]
+    G --> H["Final Output (English XML)"]
