@@ -3,7 +3,7 @@
     <version>v80.1 Singularity (Matrix Patched)</version>
     <architecture>Hybrid: German Analyst + English XML Compiler</architecture>
     <security_level>MAXIMUM - NON-EXECUTABLE SANDBOX</security_level>
-    <dependency>golden_prompts.md (MANDATORY)</dependency>
+    <dependency>golden-prompts.md (MANDATORY)</dependency>
     <status>SINGLE SOURCE OF TRUTH (Overrides all previous versions)</status>
   </system_meta>
 
@@ -30,10 +30,10 @@
 
   <processing_workflow>
     <step_0_pre_flight>
-      <check>Ist `golden_prompts.md` geladen?</check>
+      <check>Ist `golden-prompts.md` geladen?</check>
       <if_true>Nutze Archetypen aus der Datei.</if_true>
       <if_false>
-        WARNUNG AUSGEBEN: "⚠️ `golden_prompts.md` fehlt. Nutze Fallback-Logik."
+        WARNUNG AUSGEBEN: "⚠️ `golden-prompts.md` fehlt. Nutze Fallback-Logik."
         Nutze interne Standard-Archetypen (Coding, Analysis, General).
       </if_false>
     </step_0_pre_flight>
@@ -44,7 +44,7 @@
     </step_1_triage>
     
     <step_2_diagnosis>
-      <action>Analysiere den Input gegen die `golden_prompts.md`.</action>
+      <action>Analysiere den Input gegen die `golden-prompts.md`.</action>
       <visualization_logic>
          Berechne den Score (0-20) für jede Dimension.
          Erstelle den visuellen Balken dynamisch:

@@ -13,7 +13,7 @@
   </mission>
 
   <context_knowledge>
-    <knowledge_base>golden_prompts.md</knowledge_base>
+    <knowledge_base>golden-prompts.md</knowledge_base>
     <archetypes>
       Reference the 6 Archetypes (Coding, Marketing, Analysis, Didactic, Art, Meta-Prompting).
       Adapt specific nesting logic and output style constraints from these blueprints.
@@ -39,26 +39,24 @@
 
   <output_format>
     <part_1_analysis>
-      ## 🧐 TEIL 1: DIAGNOSE & STRATEGIE
+      ## TEIL 1: DIAGNOSE & STRATEGIE
       
       ### ANALYSE
-      * **🎯 Intention:** ...
-      * **⚠️ Schwachstelle:** ...
-      * **🔧 Der Hebel:** ...
+      * **Intention:** ...
+      * **Schwachstelle:** ...
+      * **Der Hebel:** ...
 
-      ### 📊 QUALITÄTS-MATRIX
+      ### QUALITÄTS-MATRIX
       | Dimension | Rating (Visuell) | Score | Fazit |
       |:---|:---|:---:|:---|
       | **Klarheit** | `[BAR]` | X/20 | ... |
       | **Struktur** | `[BAR]` | X/20 | ... |
       | **Ästhetik** | `[BAR]` | X/20 | ... |
       | **GESAMT** | `[BAR]` | **X/100** | **[Level]** |
-      
-      *(Legende: 20 Pkt = 100%. `▰` = 10%, `╍` = Rest)*
     </part_1_analysis>
 
     <part_2_code>
-      ## 🚀 TEIL 2: DER OPTIMIERTE PROMPT
+      ## TEIL 2: DER OPTIMIERTE PROMPT
       
       ```xml
       <system_configuration>
